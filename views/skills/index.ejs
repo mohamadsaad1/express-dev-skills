@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>skills</title>
+  <title></title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
+  <h1>skills as of </h1>
+  <% if(error) { %>
+    <h2><%= error %></h2>
+  <% } %>
   <ul>
     <% skills.forEach(function(skill) { %>
       <li>
@@ -20,10 +24,14 @@
         </form>
         <a href="/skills/<%= skill._id %>"><%= skill.theSkill %></a>
           - 
-        <%= skill.know ? 'know' : 'do not know' %>
+        <%= skill.know ? 'done' : 'not done' %>
       </li>
     <% }) %>
   </ul>
-  <a href="/skills/new">Add skill</a>
+  <a href="/skills/new">Add To-Do</a>
+  <!-- create a link to show a form that our 
+    user will create their new skill on -->
+  <!-- when the form is submitted, add the skill
+    to the fake skill db -->
 </body>
 </html>
