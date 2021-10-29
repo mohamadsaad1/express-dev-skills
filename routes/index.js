@@ -5,7 +5,7 @@ const router = Router()
 
 // localhost:3000/
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express To-Dos' })
+  res.render('index', { title: 'skills' })
 })
 
 export { 
